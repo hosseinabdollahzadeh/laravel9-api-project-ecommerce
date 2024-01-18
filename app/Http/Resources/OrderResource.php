@@ -17,7 +17,7 @@ class OrderResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'address_title' => UserAddress::find($this->address_id)->title,
+            'address_title' => UserAddress::find($this->address_id)->title ?? null,
             'status' => $this->status,
             'payment_status' => $this->payment_status,
             'paying_amount' => $this->paying_amount,
